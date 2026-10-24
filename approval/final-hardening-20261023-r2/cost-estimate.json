@@ -1,0 +1,92 @@
+{
+  "status": "OFFLINE_SECOND_RUN_PLANNING_ONLY_NOT_AUTHORIZED_NOT_A_BILL",
+  "region": "us-east-1",
+  "currency": "USD",
+  "free_tier_or_credits_assumed": false,
+  "rows": [
+    {
+      "service": "Lambda requests",
+      "basis": "40 requests x $0.30 / million",
+      "usd": 1.2e-05
+    },
+    {
+      "service": "Lambda duration",
+      "basis": "40 x 0.25 GB x 60 billed seconds x $0.00002 / GB-second",
+      "usd": 0.012
+    },
+    {
+      "service": "API Gateway",
+      "basis": "40 requests x $2 / million",
+      "usd": 8e-05
+    },
+    {
+      "service": "S3 requests including staging/readback/cleanup",
+      "basis": "150 PUT + 100 LIST at $0.01/1000; 250 GET at $0.001/1000",
+      "usd": 0.00275
+    },
+    {
+      "service": "S3 evidence and staging storage",
+      "basis": "0.25 GB-month x $0.10",
+      "usd": 0.025
+    },
+    {
+      "service": "DynamoDB requests",
+      "basis": "150 WRU at $1/million + 150 RRU at $0.50/million",
+      "usd": 0.000225
+    },
+    {
+      "service": "DynamoDB storage",
+      "basis": "1 GB-month planning allowance x $0.30; not a minimum billable size claim",
+      "usd": 0.3
+    },
+    {
+      "service": "DynamoDB PITR",
+      "basis": "1 GB-month planning allowance x $0.25",
+      "usd": 0.25
+    },
+    {
+      "service": "KMS requests",
+      "basis": "1000-request allowance x $0.01/1000; no free-tier offset",
+      "usd": 0.01
+    },
+    {
+      "service": "CloudWatch log ingestion and retention",
+      "basis": "0.01 GB x $1 ingestion + 0.01 GB-month x $0.10",
+      "usd": 0.011
+    },
+    {
+      "service": "Approved diagnostic API allowance",
+      "basis": "rounding reserve; no Insights/GetMetricData query planned",
+      "usd": 0.01
+    },
+    {
+      "service": "Internet egress",
+      "basis": "0.25 GB x $0.20",
+      "usd": 0.05
+    },
+    {
+      "service": "Account telemetry/rounding contingency",
+      "basis": "unverified existing Config/CloudTrail effects; no new service enabled",
+      "usd": 0.25
+    }
+  ],
+  "planning_total": 0.921067,
+  "rounded_operating_allowance": 1,
+  "proposed_owner_authorization_ceiling": 5,
+  "active_test_window": "one supervised hour, stack cleanup within 24 hours",
+  "storage_allowance_window": "up to one month as a contingency; prompt cleanup planned",
+  "excludes": [
+    "tax",
+    "unrelated CreditBridge/account usage",
+    "uncontrolled traffic",
+    "scope expansion"
+  ],
+  "kms_key_rental": "zero for AWS-managed key; request charges included; no customer-managed key proposed",
+  "iam_and_standard_aws_cloudformation_control_plane": "no separate direct service charge modeled; backing services included",
+  "revision": "final-hardening-20261023-r2",
+  "actual_first_run_cost": "UNAVAILABLE; no paid billing API used",
+  "previously_accepted_aggregate_target_usd": 5,
+  "proposed_cumulative_two_full_run_allowance_usd": 1.842134,
+  "remaining_actual_budget": "UNVERIFIED; do not assume a new separate $5 allowance",
+  "infrastructure_cost_delta": "None; same resources, encryption and request ceiling"
+}

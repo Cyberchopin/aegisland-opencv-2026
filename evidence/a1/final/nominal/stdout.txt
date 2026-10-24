@@ -1,0 +1,24 @@
+{
+  "scenario": "nominal",
+  "description": "Healthy mission with stable telemetry and clear ground.",
+  "frames": 60,
+  "wall_seconds": 14.798,
+  "frames_per_second": 4.05,
+  "actions": {
+    "continue_mission": 60
+  },
+  "active_perception_frames": 0,
+  "human_approval_frames": 0,
+  "final_decision": {
+    "action": "continue_mission",
+    "safety_level": "nominal",
+    "risk_score": 0.0545,
+    "requires_human_approval": false,
+    "reasons": [
+      "Telemetry and current OpenCV evidence remain inside the safety envelope."
+    ],
+    "evidence_id": "0faf4121a55d",
+    "target_zone_id": null,
+    "command_executed": true
+  }
+}

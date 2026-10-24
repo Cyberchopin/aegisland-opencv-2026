@@ -1,0 +1,12 @@
+.baseline/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+runs/
+.aws/
+.private/
+aws-owner.json
+*private-evidence*.zip
+# Preserved local owner-specific plan; public plans use private variables.
+docs/AWS_STAGING_BUCKET_PLAN.md

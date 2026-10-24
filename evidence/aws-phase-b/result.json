@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-10-23T08:15:03.797686+00:00",
+  "deployment": "PASS",
+  "cloud_storage_verification": "FAIL",
+  "teardown": "PASS",
+  "single_execute_attempt": true,
+  "application_http_requests": 2,
+  "automatic_retries": 0,
+  "stored_verified_acknowledgements": 0,
+  "original_approval_and_evidence_files_unchanged": 186,
+  "existing_creditbridge_metadata_templates_functions": "UNCHANGED",
+  "actual_cost": "UNAVAILABLE; no paid billing API used",
+  "planning_estimate_usd": 0.921067,
+  "authorized_planning_ceiling_usd": 5,
+  "next_action": "Offline diagnosis only; no redeployment or new application test authorized"
+}

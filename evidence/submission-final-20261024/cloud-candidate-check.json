@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "env",
+    "PYTHONPATH=/home/shiyue1128/aegisland-opencv-2026/evidence/hardening/network-guard",
+    "AWS_EC2_METADATA_DISABLED=true",
+    ".venv/bin/python",
+    "scripts/verify_hardening_candidate.py"
+  ],
+  "cwd": "/home/shiyue1128/aegisland-opencv-2026",
+  "started_utc": "2026-10-24T07:51:40.311183+00:00",
+  "finished_utc": "2026-10-24T07:51:40.965390+00:00",
+  "exit_code": 0,
+  "stdout": "PASS: packaged handler, storage and pinned SDK imports\n{\"aws_calls\": 0, \"private_template_sha256\": \"a5f1fbf0e8da0e217869388371a83c17e21373ddc360ba69a7d180ded2d46af8\"}\nPASS: two explained modules; every dependency, IAM policy and resource unchanged\n",
+  "stderr": ""
+}

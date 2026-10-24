@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "http_requests": 2,
+  "automatic_retries": 0,
+  "failure_type": "AssertionError",
+  "application_requests_halted": true,
+  "actual_billing": "UNAVAILABLE"
+}

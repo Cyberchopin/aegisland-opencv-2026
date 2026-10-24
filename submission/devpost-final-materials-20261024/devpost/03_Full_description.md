@@ -1,0 +1,11 @@
+AegisLand makes it possible to inspect why visual evidence changes a simulated landing decision. It uses OpenCV 5 over scripted synthetic video and telemetry, with a deterministic agent that can revise an intent, request an enhanced observation, or route a decision to human review. No aircraft commands are sent.
+
+The demonstration shows a moving intrusion changing return-home intent to evasive hold. A GPS/low-light example exposes pending approval and a later enhancement/rescan. These are recorded simulations, not field trials. A retry does not guarantee recovery, and critical reserve can require emergency action without waiting for approval.
+
+OpenCV performs substantive grayscale, edge, texture, optical-flow, camera-compensation and candidate-zone processing, CLAHE enhancement, annotation, and video encoding/decoding. Competition tooling adds an isolated launcher, artifact checks, provenance, a post-run evidence protocol, and adversarial tests while preserving the pinned core safety policy.
+
+Saved validation results are 215 passed and 1 skipped in the full core suite, with the skip being optional native CUDA integration, and 121 passed in the competition suite. The frozen source ZIP is 9,181,179 bytes with SHA-256 8a03304e33ba80f9c19a2ca69022bfd9369674f899497ceda4db6a6a6bb0cfe4. These results were not rerun while preparing the submission materials.
+
+Our real AWS evidence stack deployed successfully, but its first signed packet returned 503 storage_unverified. We stopped without retry, preserved partial evidence, and completed teardown. No complete cloud bundle or successful storage acknowledgement was verified. Offline corrections address the DynamoDB reserved-word expression and acknowledgement validation; the exact old AWS error code was not recorded, and the corrected storage path is not yet cloud-verified.
+
+This is a research prototype with heuristic perception on fixed synthetic scenes. We claim no production-flight safety, field success rate, real-time guarantee, GPU speedup, COOL workload, or end-to-end cloud-storage success. Coding agents assisted implementation, tests and documentation; the runtime planner does not depend on an LLM. The submission provides the reviewed source archive, report, recorded evidence and reproduction instructions. Initial core/dependency acquisition requires access and network.

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "stack_status": "CREATE_COMPLETE",
+  "resource_count": 9,
+  "application_requests": 0,
+  "code_sha256_match": true,
+  "iam_authentication": true
+}

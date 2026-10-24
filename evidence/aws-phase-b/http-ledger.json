@@ -1,0 +1,24 @@
+[
+  {
+    "request_number": 1,
+    "phase": "unsigned-authentication",
+    "signed": false,
+    "body_sha256": "3cbd8bad338d3e5015e49d2175719ed2e036a54dd056d5e9b46e6a3ded9f8fc4",
+    "state": "expected_result_verified",
+    "attempt": 1,
+    "status": 403,
+    "response_body": "{\"message\":\"Forbidden\"}",
+    "response_sha256": "12a22880bc2e59f8278b4a5e547567f0aa14d020ea456598267fa00208cfebc5"
+  },
+  {
+    "request_number": 2,
+    "phase": "nominal-upload",
+    "signed": true,
+    "body_sha256": "3cbd8bad338d3e5015e49d2175719ed2e036a54dd056d5e9b46e6a3ded9f8fc4",
+    "state": "halted_unexpected_result",
+    "attempt": 1,
+    "status": 503,
+    "response_body": "{\"error\": \"storage_unverified\"}",
+    "response_sha256": "f6c8977d597519e2c0a377be33178f59703d995cfd7ae93d6ac09eb06b905dca"
+  }
+]

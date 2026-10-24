@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "env",
+    "PYTHONPATH=/home/shiyue1128/aegisland-opencv-2026/evidence/hardening/network-guard",
+    "AWS_EC2_METADATA_DISABLED=true",
+    ".venv/bin/python",
+    "scripts/reproduce_cloud_candidate.py"
+  ],
+  "cwd": "/home/shiyue1128/aegisland-opencv-2026",
+  "started_utc": "2026-10-24T08:04:45.505861+00:00",
+  "finished_utc": "2026-10-24T08:04:46.229244+00:00",
+  "exit_code": 0,
+  "stdout": "{\"status\": \"OFFLINE_CORRECTION_NOT_DEPLOYED_REQUIRES_NEW_APPROVAL\", \"artifact_sha256\": \"52e37629b1434e9a898448ddd5f63aa94ce367b1f552fdb5c082c92ea816aa39\"}\nPASS: rebuilt ZIP bytes and complete manifest exactly match the reviewed candidate; no AWS or dependency download\n",
+  "stderr": ""
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "Selected fields from saved local traces; not a new run",
+  "rows": [
+    {
+      "source": "evidence/a1/final/low_battery_intrusion/trace.jsonl",
+      "source_sha256": "82c40c6f132c9191ea5e8d0a03004b73d7a4092311714b902796827ec91d8a98",
+      "sequence": 37,
+      "action": "return_home",
+      "motion_risk": 0.0,
+      "active_perception_used": false,
+      "approval_status": null,
+      "hardware_command_sent": false
+    },
+    {
+      "source": "evidence/a1/final/low_battery_intrusion/trace.jsonl",
+      "source_sha256": "82c40c6f132c9191ea5e8d0a03004b73d7a4092311714b902796827ec91d8a98",
+      "sequence": 38,
+      "action": "evade_and_hold",
+      "motion_risk": 0.1825,
+      "active_perception_used": false,
+      "approval_status": null,
+      "hardware_command_sent": false
+    },
+    {
+      "source": "evidence/a1/final/gps_loss_low_light/trace.jsonl",
+      "source_sha256": "a47a9606d7b55dfb0ad906ac81e59f16c5a416e50038d28a9a828146288661f9",
+      "sequence": 22,
+      "action": "request_human_approval",
+      "motion_risk": 0.0,
+      "active_perception_used": false,
+      "approval_status": "pending",
+      "hardware_command_sent": false
+    },
+    {
+      "source": "evidence/a1/final/gps_loss_low_light/trace.jsonl",
+      "source_sha256": "a47a9606d7b55dfb0ad906ac81e59f16c5a416e50038d28a9a828146288661f9",
+      "sequence": 29,
+      "action": "request_human_approval",
+      "motion_risk": 0.0,
+      "active_perception_used": false,
+      "approval_status": "pending",
+      "hardware_command_sent": false
+    },
+    {
+      "source": "evidence/a1/final/gps_loss_low_light/trace.jsonl",
+      "source_sha256": "a47a9606d7b55dfb0ad906ac81e59f16c5a416e50038d28a9a828146288661f9",
+      "sequence": 30,
+      "action": "request_human_approval",
+      "motion_risk": 0.0668,
+      "active_perception_used": true,
+      "approval_status": "pending",
+      "hardware_command_sent": false
+    }
+  ]
+}

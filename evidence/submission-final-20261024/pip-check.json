@@ -1,0 +1,14 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pip",
+    "check"
+  ],
+  "cwd": "/home/shiyue1128/aegisland-opencv-2026",
+  "started_utc": "2026-10-24T08:07:43.005792+00:00",
+  "finished_utc": "2026-10-24T08:07:43.279415+00:00",
+  "exit_code": 0,
+  "stdout": "No broken requirements found.\n",
+  "stderr": "WARNING: The directory '/home/shiyue1128/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n"
+}

@@ -1,0 +1,9 @@
+{
+  "fresh_80_decisions_exactly_preserved": true,
+  "a1_provenance_hashes": {
+    "nominal": true,
+    "low_battery_intrusion": true,
+    "gps_loss_low_light": true
+  },
+  "comparison": "Complete decision dictionaries; IDs/timestamps outside decision excluded"
+}

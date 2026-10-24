@@ -1,0 +1,19 @@
+# Historical recording plan — superseded
+
+**Historical/superseded:** use the [current 2:55 shot list](../devpost-final-materials-20261024/03_分秒镜头表.md) and [English narration](../devpost-final-materials-20261024/02_英文口播稿.txt). The former 3:45 plan below is preserved for history; it is not the current recording instruction.
+
+Record a real team introduction and actual application footage. This file is a plan, not a finished video. Use 1080p capture, large text and readable pauses. Hide notifications, private terminals/AWS consoles and personal/account details. Keep the cursor away from evidence rows. Use the [visual assets](VISUAL_ASSETS.md); do not generate substitute result images.
+
+| Time | Screen / action | Suggested narration |
+| --- | --- | --- |
+| 0:00–0:20 | Real owner/team introduction; title and synthetic-scene label | “I'm [your actual name/team]. AegisLand makes it possible to inspect why visual evidence changes a simulated landing decision. This is a research prototype; it sends no aircraft commands.” |
+| 0:20–0:50 | Architecture diagram; highlight OpenCV, rescan and human gate | “OpenCV 5 measures edges, texture, motion and candidate zones. A deterministic agent can request an enhanced observation, revise an intent or route a decision for review. The trace records the evidence and reason. Critical reserve can require emergency action without waiting.” |
+| 0:50–1:35 | Play intrusion excerpt; pause at 37 and 38 with matching trace | “Here return-home intent is replaced by evasive hold as motion risk rises from zero to 0.1825. The video and trace refer to the same evidence. These are rendered scene changes, not a person-detection benchmark or a flight trial.” |
+| 1:35–2:15 | GPS/low-light 22,29,30; approval and retry fields | “GPS loss produces a pending review state. Darkness then causes a second observation using CLAHE enhancement. Visual output changes the next tool call. A retry can still leave uncertainty; it is not guaranteed recovery. Commands do not alter these fixed future scene frames.” |
+| 2:15–2:45 | Local command, saved validation result, provenance and hash list | “Three retained scenarios have 230 matching frames and trace events. The source pin, OpenCV build, commands and hashes let a reviewer reproduce the run. Our final validation records passing tests separately from collection and optional GPU skips. Playback speed is not processing throughput.” |
+| 2:45–3:20 | Sanitized cloud result table and two receipts; correction red/green | “The real nine-resource AWS deployment passed. Authentication rejected the unsigned request, but the first signed packet returned 503 storage_unverified. We stopped without retry, preserved the partial evidence and completed teardown. The offline correction passes regression tests; it has not yet been verified in AWS.” |
+| 3:20–3:45 | Current source/report entry, evaluation limits and close | “The demonstrated result is a traceable change from OpenCV observations to the next simulated action. Reliable cloud storage and independent field evaluation remain open. Source, report and reproduction instructions are available to judges through the reviewed links or arranged demonstration.” |
+
+Use the actual test result on screen; never substitute the216 collected count for passes. If a new authorized cloud test succeeds, update only the cloud-result segment after verifying real acknowledgements and full readback. Keep the first failure disclosed in the report. Do not record an invented approval-button interaction or present mocked receipts as live success.
+
+Export MP4/H.264 with narration, inspect its actual duration and playback, then upload as public/unlisted only after owner review. Test the final URL signed out. The owner must add the real team introduction, accessible source/report links and demo arrangement; no placeholder should reach Devpost.

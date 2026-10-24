@@ -1,0 +1,1 @@
+An OpenCV 5 prototype that links visual evidence to the next simulated landing action, with traceable decisions and human-review states.

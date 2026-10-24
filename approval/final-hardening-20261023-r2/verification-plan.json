@@ -1,0 +1,604 @@
+{
+  "status": "OFFLINE_REQUEST_PLAN_NOT_EXECUTED",
+  "bundle_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+  "application_requests_planned": 34,
+  "application_request_ceiling": 40,
+  "uploader_processes": 1,
+  "attempts_per_packet": 1,
+  "automatic_retries": 0,
+  "all_phases_sequential": true,
+  "stop_on_unexpected_errors": true,
+  "lambda_concurrency_isolation_guaranteed": false,
+  "requests": [
+    {
+      "request_number": 1,
+      "phase": "unsigned-authentication",
+      "signed": false,
+      "sequence": 0,
+      "body_sha256": "3cbd8bad338d3e5015e49d2175719ed2e036a54dd056d5e9b46e6a3ded9f8fc4",
+      "expected_http_status": [
+        401,
+        403
+      ],
+      "expected_acknowledgement": null
+    },
+    {
+      "request_number": 2,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 0,
+      "body_sha256": "3cbd8bad338d3e5015e49d2175719ed2e036a54dd056d5e9b46e6a3ded9f8fc4",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 0,
+        "payload_sha256": "3cbd8bad338d3e5015e49d2175719ed2e036a54dd056d5e9b46e6a3ded9f8fc4",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000000.json"
+      }
+    },
+    {
+      "request_number": 3,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 1,
+      "body_sha256": "98fd4d2c9421a7e9a8f86837aee0c0913fd7f343c2b1af42cc8cbce9a6eacf84",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 1,
+        "payload_sha256": "98fd4d2c9421a7e9a8f86837aee0c0913fd7f343c2b1af42cc8cbce9a6eacf84",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000001.json"
+      }
+    },
+    {
+      "request_number": 4,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 2,
+      "body_sha256": "83ae304115f273aac8c9fa18770fc9b2b70c69c3515a1d724327d1547282be8e",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 2,
+        "payload_sha256": "83ae304115f273aac8c9fa18770fc9b2b70c69c3515a1d724327d1547282be8e",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000002.json"
+      }
+    },
+    {
+      "request_number": 5,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 3,
+      "body_sha256": "6ae75bf87e859c0ac7702ea85a8f83025ae1d35d428b918628080168b9112705",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 3,
+        "payload_sha256": "6ae75bf87e859c0ac7702ea85a8f83025ae1d35d428b918628080168b9112705",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000003.json"
+      }
+    },
+    {
+      "request_number": 6,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 4,
+      "body_sha256": "b7b23a8f2f9120d7e9ee209444fb6e88328adeada07ba828d05d9e0307220c74",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 4,
+        "payload_sha256": "b7b23a8f2f9120d7e9ee209444fb6e88328adeada07ba828d05d9e0307220c74",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000004.json"
+      }
+    },
+    {
+      "request_number": 7,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 5,
+      "body_sha256": "8e7463eaae63c6b00f416d7e48038910d222e7bf8f8a4f788699da6175bc3a82",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 5,
+        "payload_sha256": "8e7463eaae63c6b00f416d7e48038910d222e7bf8f8a4f788699da6175bc3a82",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000005.json"
+      }
+    },
+    {
+      "request_number": 8,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 6,
+      "body_sha256": "9c7155b27ec264628d0b693d7dd093f40640076b9c44892dda3840d0c915c18d",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 6,
+        "payload_sha256": "9c7155b27ec264628d0b693d7dd093f40640076b9c44892dda3840d0c915c18d",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000006.json"
+      }
+    },
+    {
+      "request_number": 9,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 7,
+      "body_sha256": "5974ece8b1ad35a455f65c9b232f9a7ba0afffacee77df89c5302ec83f4dc249",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 7,
+        "payload_sha256": "5974ece8b1ad35a455f65c9b232f9a7ba0afffacee77df89c5302ec83f4dc249",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000007.json"
+      }
+    },
+    {
+      "request_number": 10,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 8,
+      "body_sha256": "502705d454e50c427228cea5e2e495486123bfead2b448e5b152c1fed5ce3514",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 8,
+        "payload_sha256": "502705d454e50c427228cea5e2e495486123bfead2b448e5b152c1fed5ce3514",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000008.json"
+      }
+    },
+    {
+      "request_number": 11,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 9,
+      "body_sha256": "72ba18a9efabfcba20a17bdae4153b6faf466c3c0b7e9589b93f1c3172a78b70",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 9,
+        "payload_sha256": "72ba18a9efabfcba20a17bdae4153b6faf466c3c0b7e9589b93f1c3172a78b70",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000009.json"
+      }
+    },
+    {
+      "request_number": 12,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 10,
+      "body_sha256": "639766f84d1b4780d1a48e2c16ccffce1782e5d644df7fde6569056cd5087528",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 10,
+        "payload_sha256": "639766f84d1b4780d1a48e2c16ccffce1782e5d644df7fde6569056cd5087528",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000010.json"
+      }
+    },
+    {
+      "request_number": 13,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 11,
+      "body_sha256": "9002f93110257ecd6e9b5560895156af803d56e0c5fa18ddb0e11b4f7b02f66b",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 11,
+        "payload_sha256": "9002f93110257ecd6e9b5560895156af803d56e0c5fa18ddb0e11b4f7b02f66b",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000011.json"
+      }
+    },
+    {
+      "request_number": 14,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 12,
+      "body_sha256": "827e918db49baea3dfd00618d7b3f83fc9be14224b21cc9fe64ac37ae54e080a",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 12,
+        "payload_sha256": "827e918db49baea3dfd00618d7b3f83fc9be14224b21cc9fe64ac37ae54e080a",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000012.json"
+      }
+    },
+    {
+      "request_number": 15,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 13,
+      "body_sha256": "1ad5ad862b417f025928fe5a87ecb3c6dcc08942a23224979af2717f3e274f2f",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 13,
+        "payload_sha256": "1ad5ad862b417f025928fe5a87ecb3c6dcc08942a23224979af2717f3e274f2f",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000013.json"
+      }
+    },
+    {
+      "request_number": 16,
+      "phase": "nominal-upload",
+      "signed": true,
+      "sequence": 14,
+      "body_sha256": "1afbb4f10111223f35abacdf1d33334718541012a92454b87bf882380967051f",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 14,
+        "payload_sha256": "1afbb4f10111223f35abacdf1d33334718541012a92454b87bf882380967051f",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000014.json"
+      }
+    },
+    {
+      "request_number": 17,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 0,
+      "body_sha256": "3cbd8bad338d3e5015e49d2175719ed2e036a54dd056d5e9b46e6a3ded9f8fc4",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 0,
+        "payload_sha256": "3cbd8bad338d3e5015e49d2175719ed2e036a54dd056d5e9b46e6a3ded9f8fc4",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000000.json"
+      }
+    },
+    {
+      "request_number": 18,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 1,
+      "body_sha256": "98fd4d2c9421a7e9a8f86837aee0c0913fd7f343c2b1af42cc8cbce9a6eacf84",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 1,
+        "payload_sha256": "98fd4d2c9421a7e9a8f86837aee0c0913fd7f343c2b1af42cc8cbce9a6eacf84",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000001.json"
+      }
+    },
+    {
+      "request_number": 19,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 2,
+      "body_sha256": "83ae304115f273aac8c9fa18770fc9b2b70c69c3515a1d724327d1547282be8e",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 2,
+        "payload_sha256": "83ae304115f273aac8c9fa18770fc9b2b70c69c3515a1d724327d1547282be8e",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000002.json"
+      }
+    },
+    {
+      "request_number": 20,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 3,
+      "body_sha256": "6ae75bf87e859c0ac7702ea85a8f83025ae1d35d428b918628080168b9112705",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 3,
+        "payload_sha256": "6ae75bf87e859c0ac7702ea85a8f83025ae1d35d428b918628080168b9112705",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000003.json"
+      }
+    },
+    {
+      "request_number": 21,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 4,
+      "body_sha256": "b7b23a8f2f9120d7e9ee209444fb6e88328adeada07ba828d05d9e0307220c74",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 4,
+        "payload_sha256": "b7b23a8f2f9120d7e9ee209444fb6e88328adeada07ba828d05d9e0307220c74",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000004.json"
+      }
+    },
+    {
+      "request_number": 22,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 5,
+      "body_sha256": "8e7463eaae63c6b00f416d7e48038910d222e7bf8f8a4f788699da6175bc3a82",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 5,
+        "payload_sha256": "8e7463eaae63c6b00f416d7e48038910d222e7bf8f8a4f788699da6175bc3a82",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000005.json"
+      }
+    },
+    {
+      "request_number": 23,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 6,
+      "body_sha256": "9c7155b27ec264628d0b693d7dd093f40640076b9c44892dda3840d0c915c18d",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 6,
+        "payload_sha256": "9c7155b27ec264628d0b693d7dd093f40640076b9c44892dda3840d0c915c18d",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000006.json"
+      }
+    },
+    {
+      "request_number": 24,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 7,
+      "body_sha256": "5974ece8b1ad35a455f65c9b232f9a7ba0afffacee77df89c5302ec83f4dc249",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 7,
+        "payload_sha256": "5974ece8b1ad35a455f65c9b232f9a7ba0afffacee77df89c5302ec83f4dc249",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000007.json"
+      }
+    },
+    {
+      "request_number": 25,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 8,
+      "body_sha256": "502705d454e50c427228cea5e2e495486123bfead2b448e5b152c1fed5ce3514",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 8,
+        "payload_sha256": "502705d454e50c427228cea5e2e495486123bfead2b448e5b152c1fed5ce3514",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000008.json"
+      }
+    },
+    {
+      "request_number": 26,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 9,
+      "body_sha256": "72ba18a9efabfcba20a17bdae4153b6faf466c3c0b7e9589b93f1c3172a78b70",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 9,
+        "payload_sha256": "72ba18a9efabfcba20a17bdae4153b6faf466c3c0b7e9589b93f1c3172a78b70",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000009.json"
+      }
+    },
+    {
+      "request_number": 27,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 10,
+      "body_sha256": "639766f84d1b4780d1a48e2c16ccffce1782e5d644df7fde6569056cd5087528",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 10,
+        "payload_sha256": "639766f84d1b4780d1a48e2c16ccffce1782e5d644df7fde6569056cd5087528",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000010.json"
+      }
+    },
+    {
+      "request_number": 28,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 11,
+      "body_sha256": "9002f93110257ecd6e9b5560895156af803d56e0c5fa18ddb0e11b4f7b02f66b",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 11,
+        "payload_sha256": "9002f93110257ecd6e9b5560895156af803d56e0c5fa18ddb0e11b4f7b02f66b",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000011.json"
+      }
+    },
+    {
+      "request_number": 29,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 12,
+      "body_sha256": "827e918db49baea3dfd00618d7b3f83fc9be14224b21cc9fe64ac37ae54e080a",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 12,
+        "payload_sha256": "827e918db49baea3dfd00618d7b3f83fc9be14224b21cc9fe64ac37ae54e080a",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000012.json"
+      }
+    },
+    {
+      "request_number": 30,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 13,
+      "body_sha256": "1ad5ad862b417f025928fe5a87ecb3c6dcc08942a23224979af2717f3e274f2f",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 13,
+        "payload_sha256": "1ad5ad862b417f025928fe5a87ecb3c6dcc08942a23224979af2717f3e274f2f",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000013.json"
+      }
+    },
+    {
+      "request_number": 31,
+      "phase": "duplicate-replay",
+      "signed": true,
+      "sequence": 14,
+      "body_sha256": "1afbb4f10111223f35abacdf1d33334718541012a92454b87bf882380967051f",
+      "expected_http_status": [
+        200
+      ],
+      "expected_acknowledgement": {
+        "protocol": "aegis-evidence-v1",
+        "status": "stored_verified",
+        "trace_id": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "sequence": 14,
+        "payload_sha256": "1afbb4f10111223f35abacdf1d33334718541012a92454b87bf882380967051f",
+        "object_key": "evidence/3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc/00000014.json"
+      }
+    },
+    {
+      "request_number": 32,
+      "phase": "negative-invalid-protocol",
+      "signed": true,
+      "sequence": 0,
+      "body_sha256": "44e567cf4ddeb6b3b8e95dace4acf85bfd7f453f2554883da3d33e5fb3508998",
+      "expected_http_status": [
+        400
+      ],
+      "expected_acknowledgement": null
+    },
+    {
+      "request_number": 33,
+      "phase": "negative-checksum",
+      "signed": true,
+      "sequence": 0,
+      "body_sha256": "4b9329839418b109ffe42363e19bf3cd3f86402b07b0aa55f5ad7d4e62542816",
+      "expected_http_status": [
+        400
+      ],
+      "expected_acknowledgement": null
+    },
+    {
+      "request_number": 34,
+      "phase": "negative-content-conflict",
+      "signed": true,
+      "sequence": 0,
+      "body_sha256": "8274008a1f60dcf7cc8d2eb9e8aaa77704a150329454f56658ec419e39cfba38",
+      "expected_http_status": [
+        409
+      ],
+      "expected_acknowledgement": null
+    }
+  ],
+  "readback": {
+    "s3_body_gets": 15,
+    "consistent_dynamodb_item_gets": 15,
+    "no_scan": true
+  }
+}

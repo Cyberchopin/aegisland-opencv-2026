@@ -1,0 +1,13 @@
+Hi, I'm [YOUR NAME], creator of AegisLand. This research prototype makes visual decisions inspectable. The scenes are synthetic, and no aircraft commands are sent.
+
+OpenCV 5 measures edges, texture, motion, and candidate landing zones. A deterministic agent uses that evidence to revise a simulated action, request another observation, or enter human review. The cloud is a separate evidence path, not flight control.
+
+Here, a moving intrusion changes the next intent from return-home to evasive hold. The recorded frame and decision trace refer to the same observation. We show the transition rather than claiming real-world person-detection accuracy.
+
+In the GPS and low-light example, the trace shows pending human approval. Reduced confidence also triggers enhancement and another OpenCV observation. A retry can still leave uncertainty. Critical reserve can require emergency action without waiting for approval.
+
+The saved full core suite has 215 passing tests and one skipped optional native CUDA integration test. The competition suite has 121 passing tests. These are saved results, not a new test run. The frozen source archive has a SHA-256 manifest for review and reproduction.
+
+Our real AWS stack deployed, but the first signed packet returned 503 storage_unverified. We stopped, preserved the partial evidence, and completed teardown. The exact historical AWS error code was not recorded. The offline correction passes regression tests, but corrected cloud storage has not been verified.
+
+AegisLand's demonstrated result is a traceable change from visual evidence to the next simulated action. We claim no flight certification, real-time guarantee, GPU speedup, or end-to-end cloud-storage success. The package includes the code, report, recorded evidence, and reproduction instructions. Thank you.

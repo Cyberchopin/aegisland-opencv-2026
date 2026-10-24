@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AegisLand technical report</title><style>body{font:16px/1.55 Arial,sans-serif;max-width:1050px;margin:2rem auto;padding:0 1rem;color:#17324d}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccd;padding:.5rem;text-align:left}svg,img{max-width:100%;height:auto}pre{white-space:pre-wrap}@media print{body{max-width:none;margin:0}svg,table{break-inside:avoid}}</style><main><h1>AegisLand: visual evidence changes the next simulated action</h1>
+<p>Current judge-facing report, October 24, 2026. This supersedes status statements in the preserved earlier reports without changing their evidence.</p>
+<h2>Problem and scope</h2>
+<p>A landing supervisor must reconsider a plan when a hazard appears, navigation becomes unavailable or visual confidence falls. AegisLand is a research tool for robotics developers inspecting that decision process. It links measured image changes to another observation, a revised simulated intent or a human-review state, with a trace explaining the transition.</p>
+<p>The demonstration uses fixed synthetic imagery and telemetry. It sends no aircraft commands, does not simulate flight dynamics and does not establish production safety or real-world detection accuracy. Its intended operational benefit remains a hypothesis.</p>
+<h2>Implementation and architecture</h2>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">AegisLand: measured local loop and separately verified cloud boundary</title><desc id="desc">OpenCV measurements feed a deterministic planner, a rescan loop and simulated commands with human-review states. Local immutable evidence is delivered after simulation. The first AWS deployment passed, storage returned503 and teardown passed; the new correction is offline-only.</desc>
+<defs><marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8" fill="#47617b"/></marker></defs>
+<rect width="1200" height="760" fill="#f7fafc"/><g font-family="Arial,sans-serif" fill="#17324d"><text x="50" y="48" font-size="30" font-weight="bold">AegisLand — evidence drives the next simulated action</text>
+<text x="50" y="80" font-size="18">Pinned OpenCV 5 CPU path · deterministic policy · no aircraft commands</text>
+<g fill="#e1efff" stroke="#517ca8" stroke-width="2"><rect x="50" y="130" width="255" height="150" rx="14"/><rect x="405" y="130" width="350" height="150" rx="14"/><rect x="855" y="130" width="295" height="150" rx="14"/></g>
+<g font-size="19"><text x="70" y="164" font-weight="bold">Scripted observation</text><text x="70" y="198">Video + telemetry</text><text x="70" y="230">GPS / light / motion faults</text><text x="425" y="164" font-weight="bold">OpenCV perception</text><text x="425" y="198">Edges, flow, compensation, zones</text><text x="425" y="230">Risk and confidence heuristics</text><text x="875" y="164" font-weight="bold">Planner and human gate</text><text x="875" y="198">Inspect / rescan / revise intent</text><text x="875" y="230">Simulation adapter only</text></g>
+<g stroke="#47617b" stroke-width="3" fill="none" marker-end="url(#a)"><path d="M305 205H405"/><path d="M755 205H855"/><path d="M1000 280V335H580V280"/><path d="M580 335V385"/></g>
+<text x="650" y="322" font-size="17">Low-confidence retry: CLAHE + re-observe</text>
+<rect x="320" y="390" width="620" height="105" rx="14" fill="#dcf3e4" stroke="#477f5a" stroke-width="2"/><text x="345" y="427" font-size="21" font-weight="bold">Immutable local evidence</text><text x="345" y="460" font-size="18">Annotated MP4 · decisions · dashboard · hashes · provenance</text>
+<path d="M630 495V540" stroke="#47617b" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#a)"/>
+<rect x="130" y="550" width="940" height="150" rx="14" fill="#fff0db" stroke="#ad7630" stroke-width="2"/><text x="155" y="586" font-size="21" font-weight="bold">Separate post-run AWS evidence path</text><text x="155" y="619" font-size="18">IAM API → Lambda → conditional S3 bytes + DynamoDB index</text><text x="155" y="651" font-size="18">Historical run: deployment PASS · storage503FAIL · teardownPASS</text><text x="155" y="680" font-size="18">Current correction: offline tests pass · not cloud-verified · new owner approval required</text>
+<text x="50" y="738" font-size="16">Three fixed synthetic runs / 230 events. Not flight certification, GPU acceleration, or a field-success claim.</text></g></svg></p>
+<p>The external core is pinned to <code>eda23d3ea646e8943287703c07a91e9a3b2909fb</code>. It supplies perception, the deterministic agent/planner, policy, approval handling, scripted scenarios, command adapter and reporting. Competition additions provide the isolated launcher, provenance checks, post-run evidence protocol, cloud reliability tests and submission tooling. Core safety policy is unchanged. Coding agents assisted development; the runtime agent does not require an LLM.</p>
+<p>Python 3.12, NumPy 2.5.2 and <code>opencv-python==5.0.0.93</code> provide the demonstrated environment; OpenCV imports as 5.0.0. OpenCV performs actual BGR/grayscale processing, blur, Canny/morphology, Laplacian texture analysis, Farneback optical flow, ORB/matching/homography compensation, candidate-zone measurements, CLAHE enhancement, annotation, video encoding and decoding. It is not merely imported for eligibility.</p>
+<p>Low confidence can trigger enhancement and a second OpenCV observation when reserve permits. Perception feeds navigation/risk assessment and can change the next action. Human approval blocks execution where required; critical reserve can require emergency action without waiting. The unchanged deterministic policy—not a cloud response—makes these decisions.</p>
+<p>The cloud path runs after local simulation: signed HTTP packets → IAM-authenticated API → Arm64 Lambda → conditional S3 object → DynamoDB index → verified acknowledgement. S3 bytes are read and hashed, then the index is conditionally inserted and consistently read. An acknowledgement identifies the bundle, sequence, canonical payload hash and object key. These checks are not an atomic cross-service transaction or a promise of permanent retention.</p>
+<h2>Evaluation and observed behavior</h2>
+<p>The retained recordings are three scripted scenarios, not independent missions:</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align:right">Events / decoded frames</th>
+<th>Observed actions / behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nominal</td>
+<td style="text-align:right">60</td>
+<td>Continue mission throughout</td>
+</tr>
+<tr>
+<td>Low battery and intrusion</td>
+<td style="text-align:right">90</td>
+<td>Return40, evade25, land14, request-approval2, emergency-land9</td>
+</tr>
+<tr>
+<td>GPS loss and low light</td>
+<td style="text-align:right">80</td>
+<td>Continue20, return2, request-approval51, land7; 50 active-perception frames</td>
+</tr>
+</tbody>
+</table>
+<p>At intrusion sequence 37, motion risk is 0 and intent is return-home; at 38, risk is 0.1825 and intent is evasive hold. At GPS/low-light 22 the trace shows pending human review; active perception changes from false at 29 to true at 30. This is evidence of a visual result changing later behavior and tool calls. It is not semantic person-detection evaluation. Approval-frame counts do not count distinct operator requests, and a confidence increase is not proof of improved hazard detection.</p>
+<p>All230 events have matching decoded video and <code>hardware_command_sent=false</code>. Artifacts include annotated MP4, trace, summary, dashboard, OpenCV build details, commands and provenance hashes. A fresh 80-frame GPS/low-light run preserves all 80 decision dictionaries. The MP4's 15 FPS is playback speed, not throughput.</p>
+<p>The current competition suite has 121 passing offline tests, including SDK contracts, malformed inputs, partial writes, permission/timeouts, concurrent identical/conflicting requests and strict acknowledgements. The full pinned core suite completed with 215 passed and one optional native-CUDA integration skipped, from 216 collected. The final validation matrix records the exact command/output separately from collection. Simulated invalid-signature/expired-time denials test client stop behavior; they do not prove live AWS authentication enforcement. One real unsigned request did return403 in the historical run.</p>
+<p>CPU profiling separates uninstrumented, stage-instrumented and cProfile rounds and checks exact replay equivalence. Smoke measurements are from an uncontrolled host and are not advertised as real-time performance. Historical standalone CUDA summaries lack their full raw measurement artifacts here; no integrated GPU, COOL or speedup claim is made.</p>
+<h2>Real AWS result and current correction</h2>
+<p>The reviewed stack's nine resources reached CREATE_COMPLETE. The deployed ZIP hash, Python 3.12 Arm64 configuration and AWS_IAM route were verified. The unsigned request returned the expected 403. The first signed packet returned <strong>503 <code>storage_unverified</code></strong>. Verification stopped after two HTTP requests, with no retry and <strong>zero successful storage acknowledgements</strong>.</p>
+<p>A 1,618-byte S3 packet matched its original bytes; no corresponding DynamoDB item existed. Evidence was exported before approved deletion of the stack, retained evidence bucket/table and exact staging object. The owner-managed staging bucket remains. Existing unrelated stack/template/function metadata was unchanged. This demonstrates a real deployment and failure boundary, not end-to-end cloud-storage success. Actual billed cost remains unavailable.</p>
+<p>Saved logs retained only <code>ClientError</code>; the exact historical service, operation and AWS error code cannot be recovered. Offline investigation found an invalid bare <code>Sequence</code> expression, corrected with attribute-name aliases. A deterministic regression reproduces DynamoDB-style ValidationException and passes after the correction; this is not proof of the historical code. Additional hardening rejects numeric completion flags and wrong-type ACK sequences, handles deeply nested malformed JSON and adds sanitized diagnostics.</p>
+<p>Candidate <code>final-hardening-20261023-r2</code> changes only storage/client module bytes; dependency hashes, the nine resources, scoped role/inline policy and encryption are unchanged. It has <strong>not been verified in AWS</strong>. Its conservative full-run allowance is $0.921067; two such allowances total $1.842134 against an aggregate $5 planning target. These are not actual bills or enforced caps. A second Phase A and subsequent new-UUID Phase B require separate authorization.</p>
+<h2>Responsible use and reproduction</h2>
+<p>The synthetic inputs contain no bystander footage. Human-control limits, failure results and the simulation boundary are explicit. Private AWS identifiers/logs/configuration are excluded from the public package. Retained resources, delayed billing, shared concurrency and AWS-managed KMS are disclosed in the cloud plans. No quota increase, new security grant or safety-policy relaxation is part of the correction.</p>
+<p>Follow <a href="REPRODUCE.md">REPRODUCE.md</a>, use the exact core pin and install the locked dependencies. Initial acquisition needs network; prepared execution is offline. The public source manifest identifies a working-tree snapshot rather than pretending the base commit contains uncommitted additions. Distribution rights, team eligibility, source/video access and a live-demo arrangement must be confirmed by the owner.</p>
+<p>Primary evidence: <code>evidence/a1/final/</code>, <code>evidence/aws-phase-b/</code>, <code>evidence/storage-remediation/</code>, <code>evidence/hardening/</code> and the final validation matrix. The historical failure report remains <code>docs/AWS_PHASE_B_RESULT.md</code>. Claims about corrected live storage must remain pending until a separately authorized test verifies all packets and reconstructed files.</p>
+</main></html>

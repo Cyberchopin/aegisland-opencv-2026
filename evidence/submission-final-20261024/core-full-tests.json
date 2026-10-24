@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "env",
+    "-u",
+    "AEGISLAND_GRAY_EXE",
+    "-u",
+    "AEGISLAND_TRACE_ENDPOINT",
+    "PYTHONPATH=/home/shiyue1128/aegisland-opencv-2026/evidence/hardening/network-guard:/home/shiyue1128/aegisland-opencv-2026/.baseline/core/src",
+    "AWS_EC2_METADATA_DISABLED=true",
+    "OMP_NUM_THREADS=1",
+    "OPENBLAS_NUM_THREADS=1",
+    ".venv/bin/python",
+    "-c",
+    "import cv2,pytest; cv2.setNumThreads(1); print(\"OpenCV threads:\",cv2.getNumThreads()); raise SystemExit(pytest.main([\"-c\",\".baseline/core/pyproject.toml\",\".baseline/core/tests\",\"-o\",\"addopts=\",\"-q\",\"-ra\"]))"
+  ],
+  "cwd": "/home/shiyue1128/aegisland-opencv-2026",
+  "started_utc": "2026-10-24T07:51:20.996834+00:00",
+  "finished_utc": "2026-10-24T08:13:31.142119+00:00",
+  "exit_code": 0,
+  "stdout": "OpenCV threads: 1\n..............................s......................................... [ 33%]\n........................................................................ [ 66%]\n........................................................................ [100%]\n=========================== short test summary info ============================\nSKIPPED [1] .baseline/core/tests/test_cuda_gray.py:29: opt-in CUDA integration\n215 passed, 1 skipped in 1379.49s (0:22:59)\n",
+  "stderr": ""
+}

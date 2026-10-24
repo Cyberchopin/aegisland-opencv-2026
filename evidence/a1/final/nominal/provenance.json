@@ -1,0 +1,52 @@
+{
+  "started_utc": "2026-10-22T06:46:40.303907+00:00",
+  "core_commit": "eda23d3ea646e8943287703c07a91e9a3b2909fb",
+  "core_status_before": "clean",
+  "competition_commit": "4ba11c1781e51b6822a8bc329080fe903258fba4",
+  "competition_status": "?? .github/\n?? .gitignore\n?? core-pin.json\n?? evidence/\n?? scripts/\n?? tests/",
+  "entrypoint_sha256": "3b8cc63abc5d2159bbcd3810e1fab013f945535759ae08d618f545f0d59e0d99",
+  "core_pin_sha256": "b87987ea4c038bb5cc73fe0d0404fe76c7e714f953aa54bbdce79ddf0b73f2e6",
+  "command": [
+    "/home/shiyue1128/aegisland-opencv-2026/.venv/bin/python",
+    "-m",
+    "aegisland",
+    "demo",
+    "--scenario",
+    "nominal",
+    "--output",
+    "/home/shiyue1128/aegisland-opencv-2026/evidence/a1/final/nominal"
+  ],
+  "cwd": "/home/shiyue1128/aegisland-opencv-2026/.baseline/core",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "environment_overrides": {
+    "PYTHONPATH": "/home/shiyue1128/aegisland-opencv-2026/.baseline/core/src",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1"
+  },
+  "cloud_mode": "disabled: AEGISLAND_TRACE_ENDPOINT removed from child environment",
+  "status": "PASS",
+  "versions": {
+    "opencv": "5.0.0",
+    "numpy": "2.5.2",
+    "core_module": "/home/shiyue1128/aegisland-opencv-2026/.baseline/core/src/aegisland/__init__.py"
+  },
+  "returncode": 0,
+  "validation": {
+    "trace_events": 60,
+    "decoded_video_frames": 60,
+    "all_commands_simulation_only": true
+  },
+  "core_status_after": "clean",
+  "finished_utc": "2026-10-22T06:46:54.296723+00:00",
+  "sha256": {
+    "annotated.mp4": "e5f22136d72d053a4eb8315984b76b55633094890b0cf683ee338f1cf50d2d28",
+    "opencv-build.txt": "e67719630885aff17ed261a0d2358ab4416b246a069e2514fe91e71dda715f56",
+    "report.html": "a032913e940cf33aeecb1c7f3ec2d87cafeee7a080f1fa3fadb11a01f6b68eed",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "0d1d99b3809384e561b28860c395cdf52032500e66682bd8b878ab535d6fe144",
+    "summary.json": "a630b79894d60579fd133f9538b9abe2a0653943ca72503b78e7f4ee8d0561e0",
+    "trace.jsonl": "3e1839f54592481ef5d05b37ed4341382cbcd729a918abf6d4c025a2e5186f3c"
+  }
+}

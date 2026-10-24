@@ -1,0 +1,15 @@
+{
+  "argv": [
+    ".baseline/cfn-venv/bin/cfn-lint",
+    "-t",
+    "infra/template.yaml",
+    "infra/template.unreserved-review.yaml",
+    "approval/final-hardening-20261023-r2/processed-template.OFFLINE.json"
+  ],
+  "cwd": "/home/shiyue1128/aegisland-opencv-2026",
+  "started_utc": "2026-10-24T07:52:03.770809+00:00",
+  "finished_utc": "2026-10-24T07:52:05.324541+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

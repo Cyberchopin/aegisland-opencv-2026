@@ -1,0 +1,46 @@
+[
+  {
+    "file": "submission/candidate-20261023/screenshots/low_battery_intrusion-sequence-037.png",
+    "source": "evidence/a1/final/low_battery_intrusion/annotated.mp4",
+    "source_sha256": "621777a623149405293c1181cdbc62f89ceeb01ab2649e1dee009778b0ccd0f5",
+    "trace_sha256": "82c40c6f132c9191ea5e8d0a03004b73d7a4092311714b902796827ec91d8a98",
+    "sequence": 37,
+    "image_sha256": "822de092e0f1df214ec824a036e578602c4d1a9702b5c77a278ecf9b299b32f5",
+    "decision_action": "return_home",
+    "hardware_command_sent": false,
+    "method": "Decoded original annotated MP4 frame; no overlays or generated pixels"
+  },
+  {
+    "file": "submission/candidate-20261023/screenshots/low_battery_intrusion-sequence-038.png",
+    "source": "evidence/a1/final/low_battery_intrusion/annotated.mp4",
+    "source_sha256": "621777a623149405293c1181cdbc62f89ceeb01ab2649e1dee009778b0ccd0f5",
+    "trace_sha256": "82c40c6f132c9191ea5e8d0a03004b73d7a4092311714b902796827ec91d8a98",
+    "sequence": 38,
+    "image_sha256": "0d78d39b3f39a953cf0dd080e956da5f9c5967de58b152a4681b20defd8a1843",
+    "decision_action": "evade_and_hold",
+    "hardware_command_sent": false,
+    "method": "Decoded original annotated MP4 frame; no overlays or generated pixels"
+  },
+  {
+    "file": "submission/candidate-20261023/screenshots/gps_loss_low_light-sequence-022.png",
+    "source": "evidence/a1/final/gps_loss_low_light/annotated.mp4",
+    "source_sha256": "33e38edd6270710dee6dd8bd34197aabab7cdd56b81fc897002ae84f46508d3c",
+    "trace_sha256": "a47a9606d7b55dfb0ad906ac81e59f16c5a416e50038d28a9a828146288661f9",
+    "sequence": 22,
+    "image_sha256": "0537ded86fc1cb8aba433e186747809db9fba6cc9408c850191d828ef3c2e8cd",
+    "decision_action": "request_human_approval",
+    "hardware_command_sent": false,
+    "method": "Decoded original annotated MP4 frame; no overlays or generated pixels"
+  },
+  {
+    "file": "submission/candidate-20261023/screenshots/gps_loss_low_light-sequence-030.png",
+    "source": "evidence/a1/final/gps_loss_low_light/annotated.mp4",
+    "source_sha256": "33e38edd6270710dee6dd8bd34197aabab7cdd56b81fc897002ae84f46508d3c",
+    "trace_sha256": "a47a9606d7b55dfb0ad906ac81e59f16c5a416e50038d28a9a828146288661f9",
+    "sequence": 30,
+    "image_sha256": "11fa58ae0da945fc0a4f5ebe9210de30deaaa6f6f2a77d2029fff72b451e4cad",
+    "decision_action": "request_human_approval",
+    "hardware_command_sent": false,
+    "method": "Decoded original annotated MP4 frame; no overlays or generated pixels"
+  }
+]

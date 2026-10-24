@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "authenticated_frame_captures": 4,
+  "local_links_resolve": true,
+  "html_embeds_architecture": true,
+  "video_recorded": false,
+  "files": [
+    {
+      "file": "submission/entry-20261024/CLOUD_STATUS.md",
+      "sha256": "7a6ec05c0b97834d624c119115e7b90d43bee94fef18d24c6a7a3384c9c108c6"
+    },
+    {
+      "file": "submission/entry-20261024/DEVPOST.md",
+      "sha256": "cabebb9aa3b48854c0c69cc15660c0efa4ccbedb6065e96f23bcef5cabd900aa"
+    },
+    {
+      "file": "submission/entry-20261024/REPRODUCE.md",
+      "sha256": "877c790a027303dc261d1bfde2f67b61e71a74709602bc196068aeda78e7b605"
+    },
+    {
+      "file": "submission/entry-20261024/START_HERE.md",
+      "sha256": "8663fc494a49e5dfafe38ab3c5577fa7a08f0093db86db5c8223f29838e85754"
+    },
+    {
+      "file": "submission/entry-20261024/TECHNICAL_REPORT.html",
+      "sha256": "9bfc22e5e355acba429de1449b16c6bd3cac9bbb0ee7e61660fbeb57d3c22e9a"
+    },
+    {
+      "file": "submission/entry-20261024/TECHNICAL_REPORT.md",
+      "sha256": "dc08e81efa7d5410d8d5ab35db0f41d32d9b0961eaee70037968e211fd26c9b0"
+    },
+    {
+      "file": "submission/entry-20261024/VIDEO_RECORDING_PLAN.md",
+      "sha256": "43e8965b5f32a7802ca698ff05e7603b12b2fac54fa8878dc0672bea87096b20"
+    },
+    {
+      "file": "submission/entry-20261024/VISUAL_ASSETS.md",
+      "sha256": "c446fd72c6ca29b7d3ad9fd212153d25657029de257e5905998c3bc8eebd80d8"
+    }
+  ],
+  "previous_record_sha256": "b2fc6cd3d911c3dde719e8476ebb1fd01c3a44d0c48f6c78e9760697f2ee027a",
+  "scope": "Static current report/recording-document and retained-frame hash/link refresh; no new test, inference or video recording"
+}
