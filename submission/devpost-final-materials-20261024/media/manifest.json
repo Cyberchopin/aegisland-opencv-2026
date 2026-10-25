@@ -1,0 +1,312 @@
+{
+  "kind": "browser-display-derivatives",
+  "meaning": "Display copies are transcodes of saved deterministic simulation replay, not new inference evidence. Original evidence/provenance/hash inventories remain unchanged. Linked provenance describes the original mp4v artifact, not the H.264 derivative.",
+  "new_inference": false,
+  "aircraft_commands_sent": false,
+  "aws_corrected_storage_cloud_verified": false,
+  "records": [
+    {
+      "scenario": "nominal",
+      "original": {
+        "path": "evidence/a1/final/nominal/annotated.mp4",
+        "sha256": "e5f22136d72d053a4eb8315984b76b55633094890b0cf683ee338f1cf50d2d28",
+        "bytes": 354937,
+        "codec_name": "mpeg4"
+      },
+      "display_copy": {
+        "path": "submission/devpost-final-materials-20261024/media/nominal.h264.mp4",
+        "url": "media/nominal.h264.mp4",
+        "sha256": "613471adc187b76241f632febd7869221e3a82f4c76ec3607d2a0caccd06dc4d",
+        "bytes": 55700,
+        "codec_name": "h264",
+        "pix_fmt": "yuv420p",
+        "frames": 60,
+        "width": 960,
+        "height": 540,
+        "audio_streams": 0,
+        "faststart_moov_before_mdat": true,
+        "full_ffmpeg_decode": "PASS"
+      },
+      "original_record_links": {
+        "report.html": {
+          "original": "evidence/a1/final/nominal/report.html",
+          "display_link": "media/nominal/report.html",
+          "sha256": "a032913e940cf33aeecb1c7f3ec2d87cafeee7a080f1fa3fadb11a01f6b68eed",
+          "copied_byte_for_byte": true
+        },
+        "summary.json": {
+          "original": "evidence/a1/final/nominal/summary.json",
+          "display_link": "media/nominal/summary.json",
+          "sha256": "a630b79894d60579fd133f9538b9abe2a0653943ca72503b78e7f4ee8d0561e0",
+          "copied_byte_for_byte": true
+        },
+        "provenance.json": {
+          "original": "evidence/a1/final/nominal/provenance.json",
+          "display_link": "media/nominal/provenance.json",
+          "sha256": "ff1c359abaa0ce91366cfe770c4224c53001449ac33e57b5dfeabf5801b0c46c",
+          "copied_byte_for_byte": true
+        }
+      },
+      "stderr": {
+        "original": "evidence/a1/final/nominal/stderr.txt",
+        "bytes": 0,
+        "display_message": "Empty by design — the successful run produced no stderr output"
+      },
+      "encode_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-n",
+        "-i",
+        "evidence/a1/final/nominal/annotated.mp4",
+        "-map",
+        "0:v:0",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "18",
+        "-profile:v",
+        "main",
+        "-level:v",
+        "3.1",
+        "-pix_fmt",
+        "yuv420p",
+        "-tag:v",
+        "avc1",
+        "-movflags",
+        "+faststart",
+        "-an",
+        "-sn",
+        "-dn",
+        "-map_metadata",
+        "-1",
+        "-map_chapters",
+        "-1",
+        "-threads",
+        "2",
+        "submission/devpost-final-materials-20261024/media/nominal.h264.mp4"
+      ],
+      "decode_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-hide_banner",
+        "-v",
+        "error",
+        "-xerror",
+        "-i",
+        "submission/devpost-final-materials-20261024/media/nominal.h264.mp4",
+        "-map",
+        "0:v:0",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "scenario": "low_battery_intrusion",
+      "original": {
+        "path": "evidence/a1/final/low_battery_intrusion/annotated.mp4",
+        "sha256": "621777a623149405293c1181cdbc62f89ceeb01ab2649e1dee009778b0ccd0f5",
+        "bytes": 999252,
+        "codec_name": "mpeg4"
+      },
+      "display_copy": {
+        "path": "submission/devpost-final-materials-20261024/media/low_battery_intrusion.h264.mp4",
+        "url": "media/low_battery_intrusion.h264.mp4",
+        "sha256": "9f0fc2661c8735272cdf9d35316e151f579ca8e6a2bced77bbd076a9546ebe63",
+        "bytes": 266550,
+        "codec_name": "h264",
+        "pix_fmt": "yuv420p",
+        "frames": 90,
+        "width": 960,
+        "height": 540,
+        "audio_streams": 0,
+        "faststart_moov_before_mdat": true,
+        "full_ffmpeg_decode": "PASS"
+      },
+      "original_record_links": {
+        "report.html": {
+          "original": "evidence/a1/final/low_battery_intrusion/report.html",
+          "display_link": "media/low_battery_intrusion/report.html",
+          "sha256": "22313773063f41c4aeea08a6dc44e4324c9998a2fa92c7d290fb98ee755152ca",
+          "copied_byte_for_byte": true
+        },
+        "summary.json": {
+          "original": "evidence/a1/final/low_battery_intrusion/summary.json",
+          "display_link": "media/low_battery_intrusion/summary.json",
+          "sha256": "fc4cb9da86ec107f5e5eea099435f170ca142d28d8db765acdef00e1945bb868",
+          "copied_byte_for_byte": true
+        },
+        "provenance.json": {
+          "original": "evidence/a1/final/low_battery_intrusion/provenance.json",
+          "display_link": "media/low_battery_intrusion/provenance.json",
+          "sha256": "d8fbffd73a15c4b715a36b63c174f186f79da70a37abcf9e037bcd723c2dac43",
+          "copied_byte_for_byte": true
+        }
+      },
+      "stderr": {
+        "original": "evidence/a1/final/low_battery_intrusion/stderr.txt",
+        "bytes": 0,
+        "display_message": "Empty by design — the successful run produced no stderr output"
+      },
+      "encode_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-n",
+        "-i",
+        "evidence/a1/final/low_battery_intrusion/annotated.mp4",
+        "-map",
+        "0:v:0",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "18",
+        "-profile:v",
+        "main",
+        "-level:v",
+        "3.1",
+        "-pix_fmt",
+        "yuv420p",
+        "-tag:v",
+        "avc1",
+        "-movflags",
+        "+faststart",
+        "-an",
+        "-sn",
+        "-dn",
+        "-map_metadata",
+        "-1",
+        "-map_chapters",
+        "-1",
+        "-threads",
+        "2",
+        "submission/devpost-final-materials-20261024/media/low_battery_intrusion.h264.mp4"
+      ],
+      "decode_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-hide_banner",
+        "-v",
+        "error",
+        "-xerror",
+        "-i",
+        "submission/devpost-final-materials-20261024/media/low_battery_intrusion.h264.mp4",
+        "-map",
+        "0:v:0",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "scenario": "gps_loss_low_light",
+      "original": {
+        "path": "evidence/a1/final/gps_loss_low_light/annotated.mp4",
+        "sha256": "33e38edd6270710dee6dd8bd34197aabab7cdd56b81fc897002ae84f46508d3c",
+        "bytes": 504201,
+        "codec_name": "mpeg4"
+      },
+      "display_copy": {
+        "path": "submission/devpost-final-materials-20261024/media/gps_loss_low_light.h264.mp4",
+        "url": "media/gps_loss_low_light.h264.mp4",
+        "sha256": "6e8723e7b97528adf21e85a24a37150aa6da78c545883e4476b6f9f6b8eb83a1",
+        "bytes": 125084,
+        "codec_name": "h264",
+        "pix_fmt": "yuv420p",
+        "frames": 80,
+        "width": 960,
+        "height": 540,
+        "audio_streams": 0,
+        "faststart_moov_before_mdat": true,
+        "full_ffmpeg_decode": "PASS"
+      },
+      "original_record_links": {
+        "report.html": {
+          "original": "evidence/a1/final/gps_loss_low_light/report.html",
+          "display_link": "media/gps_loss_low_light/report.html",
+          "sha256": "bb5bb309dbb3f766c039c2bf1cf2bc2ac35ec16aa76e0987c2777325b4ef1fcf",
+          "copied_byte_for_byte": true
+        },
+        "summary.json": {
+          "original": "evidence/a1/final/gps_loss_low_light/summary.json",
+          "display_link": "media/gps_loss_low_light/summary.json",
+          "sha256": "6231bba94abc677624ac57411faf86eac240b06313d455c800c11f85559f7467",
+          "copied_byte_for_byte": true
+        },
+        "provenance.json": {
+          "original": "evidence/a1/final/gps_loss_low_light/provenance.json",
+          "display_link": "media/gps_loss_low_light/provenance.json",
+          "sha256": "1240aa900bca1ba1c5852ad00acce8593f7c9fbb3f6c86ab96fb8df321aa9af9",
+          "copied_byte_for_byte": true
+        }
+      },
+      "stderr": {
+        "original": "evidence/a1/final/gps_loss_low_light/stderr.txt",
+        "bytes": 0,
+        "display_message": "Empty by design — the successful run produced no stderr output"
+      },
+      "encode_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-n",
+        "-i",
+        "evidence/a1/final/gps_loss_low_light/annotated.mp4",
+        "-map",
+        "0:v:0",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "18",
+        "-profile:v",
+        "main",
+        "-level:v",
+        "3.1",
+        "-pix_fmt",
+        "yuv420p",
+        "-tag:v",
+        "avc1",
+        "-movflags",
+        "+faststart",
+        "-an",
+        "-sn",
+        "-dn",
+        "-map_metadata",
+        "-1",
+        "-map_chapters",
+        "-1",
+        "-threads",
+        "2",
+        "submission/devpost-final-materials-20261024/media/gps_loss_low_light.h264.mp4"
+      ],
+      "decode_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-hide_banner",
+        "-v",
+        "error",
+        "-xerror",
+        "-i",
+        "submission/devpost-final-materials-20261024/media/gps_loss_low_light.h264.mp4",
+        "-map",
+        "0:v:0",
+        "-f",
+        "null",
+        "-"
+      ]
+    }
+  ]
+}

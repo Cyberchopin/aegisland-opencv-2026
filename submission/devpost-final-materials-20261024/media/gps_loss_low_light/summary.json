@@ -1,0 +1,28 @@
+{
+  "scenario": "gps_loss_low_light",
+  "description": "GPS is lost and illumination drops, forcing an active-perception retry.",
+  "frames": 80,
+  "wall_seconds": 30.316,
+  "frames_per_second": 2.64,
+  "actions": {
+    "continue_mission": 20,
+    "return_home": 2,
+    "request_human_approval": 51,
+    "land": 7
+  },
+  "active_perception_frames": 50,
+  "human_approval_frames": 51,
+  "final_decision": {
+    "action": "land",
+    "safety_level": "high",
+    "risk_score": 0.4545,
+    "requires_human_approval": false,
+    "reasons": [
+      "Battery crossed the emergency threshold.",
+      "The highest-scoring OpenCV landing zone passes all safety gates."
+    ],
+    "evidence_id": "6e3b2b8bfe12",
+    "target_zone_id": "Z1-2",
+    "command_executed": true
+  }
+}

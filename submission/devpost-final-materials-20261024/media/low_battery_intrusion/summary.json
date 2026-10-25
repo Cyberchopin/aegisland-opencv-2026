@@ -1,0 +1,29 @@
+{
+  "scenario": "low_battery_intrusion",
+  "description": "Battery collapses while a moving person enters the best landing zone.",
+  "frames": 90,
+  "wall_seconds": 20.868,
+  "frames_per_second": 4.31,
+  "actions": {
+    "return_home": 40,
+    "evade_and_hold": 25,
+    "land": 14,
+    "request_human_approval": 2,
+    "emergency_land": 9
+  },
+  "active_perception_frames": 0,
+  "human_approval_frames": 5,
+  "final_decision": {
+    "action": "emergency_land",
+    "safety_level": "critical",
+    "risk_score": 0.3536,
+    "requires_human_approval": false,
+    "reasons": [
+      "Battery is below the critical reserve; delay is more dangerous than landing.",
+      "OpenCV evidence confirms a currently clear landing zone."
+    ],
+    "evidence_id": "6bd396816559",
+    "target_zone_id": "Z1-2",
+    "command_executed": true
+  }
+}
