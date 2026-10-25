@@ -1,0 +1,34 @@
+{
+  "status": "PASS_STATIC_ARCHIVE_VERIFICATION",
+  "checked_utc": "2026-10-24T17:27:05.031584+00:00",
+  "archive": "submission/final-20261024/aegisland-judge-source-candidate.zip",
+  "bytes": 9181179,
+  "sha256": "8a03304e33ba80f9c19a2ca69022bfd9369674f899497ceda4db6a6a6bb0cfe4",
+  "entries": 498,
+  "zip_integrity": "PASS",
+  "all_public_manifest_hashes": "PASS",
+  "required_source_docs_tests_configuration_evidence": "PASS",
+  "private_owner_identifier_credential_key_path_scan": "PASS; known private owner values, access-key patterns, PEM private-key patterns, unsafe paths and forbidden directories checked",
+  "venvs_caches_temporary_outputs_nested_archives": "NONE",
+  "large_artifacts_review": "Three historical packet JSONL plans and one CPU reference NPZ over 1MB; related submission evidence",
+  "lambda_zip_manifest_source": "PASS",
+  "lambda_sha256": "52e37629b1434e9a898448ddd5f63aa94ce367b1f552fdb5c082c92ea816aa39",
+  "existing_saved_test_results": {
+    "core_passed": 215,
+    "core_skipped": 1,
+    "core_duration_seconds": 1379.49,
+    "competition_passed": 121
+  },
+  "new_test_execution": false,
+  "extracted_package_tests_or_inference": "NOT RUN under owner lightweight-only instruction",
+  "core_source_included": false,
+  "lambda_dependency_zips_in_public_archive": false,
+  "initial_dependency_and_core_acquisition_requires_network": true,
+  "aws_calls": 0,
+  "published": false,
+  "post_freeze_metadata_updates": [
+    "FINAL_SUBMISSION_HANDOFF.md",
+    "docs/candidates/OFFLINE_VALIDATION_MATRIX.md"
+  ],
+  "frozen_archive_unchanged": true
+}

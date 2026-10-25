@@ -1,0 +1,3 @@
+We demonstrated an inspectable link from OpenCV observations to a later simulated action or tool call, with visible human-review states and no hardware transmission. We preserved source pins, artifact hashes and the failed real-cloud evidence.
+
+Saved results show 215 passed and 1 optional native CUDA integration skipped in the full core suite, plus 121 passed in the competition suite. The frozen source archive and manifest are intact. A real nine-resource AWS deployment and complete teardown were recorded. We do not count that as successful end-to-end evidence storage; the first signed storage verification failed and the correction remains cloud-unverified.

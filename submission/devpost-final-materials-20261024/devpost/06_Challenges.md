@@ -1,0 +1,3 @@
+The most important challenge was avoiding false confidence in a storage result. A real AWS deployment passed, but the first signed packet returned 503 storage_unverified. We stopped and preserved the failed result instead of interpreting a partial S3 object as a completed upload. Teardown completed.
+
+The historical logger retained only ClientError, so it cannot reveal the original service/operation/error code. Offline investigation found a concrete unaliased Sequence condition in DynamoDB and gaps in mocks and type checks. Regression tests now cover those cases, but they do not establish a new cloud success. Other limits include synthetic inputs, heuristic confidence and the distinction between simulated intent and physical flight.

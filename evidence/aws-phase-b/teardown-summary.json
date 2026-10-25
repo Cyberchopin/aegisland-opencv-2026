@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "stack_deleted": true,
+  "api_function_role_inline_policy_and_log_group_absent": true,
+  "retained_evidence_bucket_deleted_after_local_export": true,
+  "retained_table_deleted_after_local_export": true,
+  "exact_staging_object_deleted": true,
+  "dedicated_staging_bucket_retained": true,
+  "aws_managed_kms_key_not_modified": true,
+  "pitr_system_backup_may_persist_up_to_35_days": true,
+  "existing_stack_templates_metadata_and_function_metadata_unchanged": true,
+  "actual_billing": "UNAVAILABLE; no Cost Explorer/paid billing query",
+  "known_residuals": [
+    "Empty owner-managed staging bucket, unchanged security controls",
+    "CloudFormation deleted-stack history",
+    "AWS-managed DynamoDB KMS key if initialized",
+    "DynamoDB PITR system backup may persist; not a manually created backup"
+  ],
+  "application_requests": 2
+}

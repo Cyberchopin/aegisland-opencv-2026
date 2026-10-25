@@ -1,0 +1,1 @@
+We wanted to inspect why a landing supervisor changes its plan when visual confidence, navigation or the surrounding scene changes. AegisLand explores that process through reproducible synthetic observations, explicit reasons and human-review states. Its goal is a defensible, traceable prototype rather than an unsupported claim of autonomous flight safety.

@@ -1,0 +1,32 @@
+[
+  {
+    "file": "visuals/architecture.svg",
+    "original": "submission/candidate-20261023/ARCHITECTURE.svg",
+    "sha256": "0ee75f475284ca144314609757e1a7f84574a4a63e628ccdf954763f4086a83c",
+    "copied_byte_for_byte": true
+  },
+  {
+    "file": "visuals/02_intrusion_sequence_037.png",
+    "original": "submission/candidate-20261023/screenshots/low_battery_intrusion-sequence-037.png",
+    "sha256": "822de092e0f1df214ec824a036e578602c4d1a9702b5c77a278ecf9b299b32f5",
+    "copied_byte_for_byte": true
+  },
+  {
+    "file": "visuals/03_intrusion_sequence_038.png",
+    "original": "submission/candidate-20261023/screenshots/low_battery_intrusion-sequence-038.png",
+    "sha256": "0d78d39b3f39a953cf0dd080e956da5f9c5967de58b152a4681b20defd8a1843",
+    "copied_byte_for_byte": true
+  },
+  {
+    "file": "visuals/04_gps_sequence_022.png",
+    "original": "submission/candidate-20261023/screenshots/gps_loss_low_light-sequence-022.png",
+    "sha256": "0537ded86fc1cb8aba433e186747809db9fba6cc9408c850191d828ef3c2e8cd",
+    "copied_byte_for_byte": true
+  },
+  {
+    "file": "visuals/05_lowlight_sequence_030.png",
+    "original": "submission/candidate-20261023/screenshots/gps_loss_low_light-sequence-030.png",
+    "sha256": "11fa58ae0da945fc0a4f5ebe9210de30deaaa6f6f2a77d2029fff72b451e4cad",
+    "copied_byte_for_byte": true
+  }
+]

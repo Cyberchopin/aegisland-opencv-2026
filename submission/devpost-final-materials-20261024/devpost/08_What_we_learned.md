@@ -1,0 +1,3 @@
+A successful deployment is not evidence of successful storage. A partial object is not a complete bundle, and an HTTP response must be checked against an exact acknowledgement contract. Mocks can miss service expression rules, and Python equality can accept the wrong scalar type unless validation is explicit.
+
+We also learned to separate an observable agentic loop from field safety, test counts from mission outcomes, recorded playback from fresh inference, and offline reproductions from a historical AWS error that was never logged in detail. Preserving the original failure is part of reproducibility.

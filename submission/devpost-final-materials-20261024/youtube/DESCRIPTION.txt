@@ -1,0 +1,20 @@
+AegisLand is a research prototype that links OpenCV 5 observations to the next simulated landing action, another observation, or a human-review state.
+
+This video shows recorded synthetic simulations, real OpenCV processing, traceable decisions and saved engineering evidence. No aircraft hardware commands are sent. The runtime planner is deterministic and does not depend on an LLM.
+
+Saved validation:
+- Full core suite: 215 passed, 1 skipped (optional native CUDA integration).
+- Competition suite: 121 passed.
+- Frozen source archive: 9,181,179 bytes.
+- SHA-256: 8a03304e33ba80f9c19a2ca69022bfd9369674f899497ceda4db6a6a6bb0cfe4
+
+Cloud disclosure: the real AWS deployment passed, but the first signed packet returned 503 storage_unverified. Verification stopped, partial evidence was preserved, and teardown completed. No complete cloud bundle or successful storage acknowledgement was verified. The offline correction has not yet been cloud-verified. The exact historical AWS error code was not recorded.
+
+No field-safety, flight-certification, real-time, GPU-speedup, COOL or end-to-end cloud-storage success claim is made.
+
+Code/archive: [REPLACE WITH JUDGE-ACCESSIBLE SOURCE LINK]
+Pinned core access: [REPLACE WITH ACCESSIBLE CORE LINK/ARRANGEMENT]
+Technical report: [REPLACE WITH REPORT LINK]
+Judge demonstration: [REPLACE WITH ACTUAL ARRANGEMENT]
+
+Submitted for OpenCV AI Competition 2026. Coding agents assisted implementation, tests and documentation. Replace all bracketed placeholders and verify every link before publishing this description.

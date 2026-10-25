@@ -1,0 +1,16 @@
+{
+  "argv": [
+    ".venv/bin/ruff",
+    "format",
+    "--check",
+    "cloud",
+    "scripts",
+    "tests"
+  ],
+  "cwd": "/home/shiyue1128/aegisland-opencv-2026",
+  "started_utc": "2026-10-24T08:07:42.973485+00:00",
+  "finished_utc": "2026-10-24T08:07:42.982860+00:00",
+  "exit_code": 0,
+  "stdout": "27 files already formatted\n",
+  "stderr": ""
+}

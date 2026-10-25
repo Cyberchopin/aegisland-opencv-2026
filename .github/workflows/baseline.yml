@@ -1,0 +1,57 @@
+name: Competition baseline
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  template-validation:
+    runs-on: ubuntu-24.04
+    env:
+      AWS_EC2_METADATA_DISABLED: 'true'
+      AWS_DEFAULT_REGION: us-east-1
+      SAM_CLI_TELEMETRY: '0'
+      __SAM_CLI_APP_DIR: ${{ github.workspace }}/.baseline/sam-config
+      AWS_ACCESS_KEY_ID: local-build-only
+      AWS_SECRET_ACCESS_KEY: local-build-only
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-template-lock.txt
+      - run: python scripts/record_command.py evidence/ci/template-lint.json cfn-lint -t infra/template.yaml infra/template.unreserved-review.yaml
+      - run: python -m venv .baseline/sam-venv
+      - run: .baseline/sam-venv/bin/python -m pip install -r requirements-sam-lock.txt
+      - run: python scripts/record_command.py evidence/ci/sam-build.json .baseline/sam-venv/bin/sam build --template-file infra/template.unreserved-review.yaml --build-dir .baseline/sam-build --cache-dir .baseline/sam-cache
+      - run: python scripts/record_command.py evidence/ci/package-import.json python -c 'import sys; sys.path.insert(0, ".baseline/sam-build/EvidenceFunction"); import app, boto3; assert boto3.__version__ == "1.40.18"'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: competition-template-validation
+          path: evidence/ci/
+  local-evidence:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: Cyberchopin/aegisland-agentic-vision
+          ref: eda23d3ea646e8943287703c07a91e9a3b2909fb
+          path: .baseline/core
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r .baseline/core/requirements-lock.txt
+      - run: python -m pip install -r requirements-aws-test.txt
+      - run: python scripts/record_command.py evidence/ci/tests.json python -m pytest -q tests
+      - run: python scripts/record_command.py evidence/ci/lint.json python -m ruff check cloud scripts tests
+      - run: python scripts/record_command.py evidence/ci/demo.json python scripts/competition_demo.py --core .baseline/core --scenario gps_loss_low_light --output evidence/ci/gps_loss_low_light
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: competition-local-evidence
+          path: evidence/ci/

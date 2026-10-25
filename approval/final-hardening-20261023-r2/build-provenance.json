@@ -1,0 +1,15 @@
+{
+  "aws_calls": 0,
+  "downloads": 0,
+  "original_approval_archive_sha256": "50da7772bbb62c8c6c067ba10393de6b692f3f7b13253fd9b0f95a8774d18eb9",
+  "original_function_zip_sha256": "1635c578a63d56d148ceccbd76ec3341c656f76518ce0f41ede5deb509fd0e0c",
+  "new_function_zip_sha256": "52e37629b1434e9a898448ddd5f63aa94ce367b1f552fdb5c082c92ea816aa39",
+  "changed_packaged_files": [
+    "competition_cloud/client.py",
+    "competition_cloud/storage.py"
+  ],
+  "all_dependency_file_hashes_preserved": true,
+  "source_template_sha256": "70ab18de01293f495e7456984832b081f080ee02b58cfd30c0ba3e3aaa526b87",
+  "processed_resources_identical": true,
+  "packaging": "Deterministic ZIP reuse; not a new SAM or live Arm64 test"
+}
