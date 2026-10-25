@@ -8,6 +8,6 @@ In the GPS and low-light example, the trace shows pending human approval. Reduce
 
 The saved full core suite has 215 passing tests and one skipped optional native CUDA integration test. The competition suite has 121 passing tests. These are saved results, not a new test run. The frozen source archive has a SHA-256 manifest for review and reproduction.
 
-Our real AWS stack deployed, but the first signed packet returned 503 storage_unverified. We stopped, preserved the partial evidence, and completed teardown. The exact historical AWS error code was not recorded. The offline correction passes regression tests, but corrected cloud storage has not been verified.
+Our first AWS storage test returned 503. We preserved that failure and corrected the evidence path. A later bounded run passed all 34 HTTP requests: authentication, 15 nominal packets, 15 duplicate replays, and three negative cases. Cloud readback passed, and all nine reconstructed files matched the frozen originals byte for byte. The test resources and exact staging object were cleaned.
 
-AegisLand's demonstrated result is a traceable change from visual evidence to the next simulated action. We claim no flight certification, real-time guarantee, GPU speedup, or end-to-end cloud-storage success. The package includes the code, report, recorded evidence, and reproduction instructions. Thank you.
+AegisLand's demonstrated result is a traceable change from visual evidence to the next simulated action. We claim no flight certification, real-time guarantee, GPU speedup. The package includes the code, report, recorded evidence, and reproduction instructions. Thank you.

@@ -1,0 +1,122 @@
+{
+  "status": "PASS_CLEANED",
+  "verified_at_utc": "2026-10-25T18:10:10.067209+00:00",
+  "artifact_sha256": "52e37629b1434e9a898448ddd5f63aa94ce367b1f552fdb5c082c92ea816aa39",
+  "application_http": {
+    "planned": 34,
+    "actual": 34,
+    "ceiling": 40,
+    "automatic_retries": 0,
+    "redirects_followed": 0,
+    "unsigned": {
+      "passed": 1,
+      "planned": 1,
+      "http_status": 403,
+      "previous_receipt_reused_without_resending": true
+    },
+    "nominal": {
+      "passed": 15,
+      "planned": 15
+    },
+    "duplicate": {
+      "passed": 15,
+      "planned": 15
+    },
+    "negative": {
+      "passed": 3,
+      "planned": 3,
+      "http_statuses": [
+        400,
+        400,
+        409
+      ]
+    }
+  },
+  "cloud_readback": {
+    "status": "PASS",
+    "s3_object_gets": 15,
+    "strongly_consistent_dynamodb_gets": 15,
+    "reconstructed_files_byte_matched": 9,
+    "files_expected": 9,
+    "files": [
+      {
+        "file": "bundle.json",
+        "bytes": 950,
+        "sha256": "3f675577e546e695d17e09cd291be796b668416f3469d8c1fd0a8be0809141cc",
+        "byte_equal": true
+      },
+      {
+        "file": "annotated.mp4",
+        "bytes": 354937,
+        "sha256": "e5f22136d72d053a4eb8315984b76b55633094890b0cf683ee338f1cf50d2d28",
+        "byte_equal": true
+      },
+      {
+        "file": "trace.jsonl",
+        "bytes": 286225,
+        "sha256": "3e1839f54592481ef5d05b37ed4341382cbcd729a918abf6d4c025a2e5186f3c",
+        "byte_equal": true
+      },
+      {
+        "file": "summary.json",
+        "bytes": 637,
+        "sha256": "a630b79894d60579fd133f9538b9abe2a0653943ca72503b78e7f4ee8d0561e0",
+        "byte_equal": true
+      },
+      {
+        "file": "report.html",
+        "bytes": 301578,
+        "sha256": "a032913e940cf33aeecb1c7f3ec2d87cafeee7a080f1fa3fadb11a01f6b68eed",
+        "byte_equal": true
+      },
+      {
+        "file": "opencv-build.txt",
+        "bytes": 7984,
+        "sha256": "e67719630885aff17ed261a0d2358ab4416b246a069e2514fe91e71dda715f56",
+        "byte_equal": true
+      },
+      {
+        "file": "stdout.txt",
+        "bytes": 638,
+        "sha256": "0d1d99b3809384e561b28860c395cdf52032500e66682bd8b878ab535d6fe144",
+        "byte_equal": true
+      },
+      {
+        "file": "stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "byte_equal": true
+      },
+      {
+        "file": "provenance.json",
+        "bytes": 2290,
+        "sha256": "ff1c359abaa0ce91366cfe770c4224c53001449ac33e57b5dfeabf5801b0c46c",
+        "byte_equal": true
+      }
+    ]
+  },
+  "cleanup": {
+    "stack": "PASS",
+    "lambda": "PASS",
+    "api": "PASS",
+    "execution_role": "PASS",
+    "log_group": "PASS",
+    "retained_evidence_bucket": "PASS",
+    "retained_table": "PASS",
+    "exact_staging_object": "PASS",
+    "existing_staging_bucket_preserved": true
+  },
+  "historical_first_attempt": {
+    "deployment": "PASS",
+    "first_signed_storage_http_status": 503,
+    "storage": "FAIL",
+    "teardown": "PASS",
+    "exact_historical_aws_error_code": "UNKNOWN"
+  },
+  "actual_charges": "UNKNOWN; no billing API queried",
+  "billing_target_is_not_a_hard_cap": true,
+  "service_managed_kms_and_possible_pitr_backup_may_persist": true,
+  "raw_private_receipts_published": false,
+  "new_inference_for_cloud_verification": false,
+  "aircraft_commands_sent": false
+}

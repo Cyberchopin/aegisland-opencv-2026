@@ -22,9 +22,9 @@ The cloud design uses an IAM-authenticated HTTP API, Arm64 Lambda, private S3 an
 
 ## Challenges and actual results
 
-Our real AWS deployment passed, but the first signed packet returned **503 storage_unverified**. We stopped after two HTTP requests with no retry, preserved one matching S3 packet with no index item, and completed teardown. We received no successful storage acknowledgement and did not verify a complete cloud bundle.
+In the first historical AWS attempt, deployment passed but the first signed packet returned **503 storage_unverified**. We stopped after two HTTP requests with no retry, preserved one matching S3 packet with no index item, and completed teardown. That first attempt had no successful storage acknowledgement or verified complete cloud bundle.
 
-Offline investigation found an unaliased DynamoDB reserved-word condition and hardened completion/acknowledgement types. The current correction passes regression tests and preserves the same resources, policies and encryption. The original log retained only ClientError, so its exact historical AWS error code is unknown. **The corrected pipeline is not yet cloud-verified.**
+Offline investigation found an unaliased DynamoDB reserved-word condition and hardened completion/acknowledgement types. The current correction passes regression tests and preserves the same resources, policies and encryption. The original log retained only ClientError, so its exact historical AWS error code is unknown. **The later corrected run passed 34/34 bounded HTTP requests**: unsigned 1/1, nominal 15/15, duplicate 15/15 and negative 3/3. Cloud readback passed; reconstructed files byte-matched 9/9. AWS test resources and the exact staging object were cleaned; the existing staging bucket was preserved.
 
 ## Accomplishments and lessons
 
@@ -32,7 +32,7 @@ The strongest demonstrated result is the causal link from an OpenCV measurement 
 
 ## Limits and next steps
 
-These are fixed synthetic scenes and heuristic perception, not field validation or flight certification. We claim no real-time behavior, GPU speedup, integrated CUDA/COOL workload or end-to-end cloud-storage success. The immediate next step is a separately authorized, bounded cloud verification—not architecture expansion.
+These are fixed synthetic scenes and heuristic perception, not field validation or flight certification. We claim no real-time behavior, GPU speedup, integrated CUDA/COOL workload or reliability beyond the bounded recorded test. The immediate next step is video recording and judge access; the completed test API was deleted.
 
 **Built with:** Python, OpenCV 5, NumPy, pytest, Boto3/Botocore, AWS Lambda, API Gateway, S3, DynamoDB, IAM and CloudWatch Logs.
 
@@ -42,5 +42,5 @@ These are fixed synthetic scenes and heuristic perception, not field validation 
 - Select the Agentic Vision path; do not claim COOL eligibility.
 - Provide judge-accessible source/archive, report and under-three-minute video URLs (current target 2:55). Verify them signed out.
 - Arrange a working live screen-share or provide a separately authorized working endpoint; a private ingestion API is not a judge UI.
-- Resolve or explicitly discuss the incomplete meaningful-cloud requirement; do not change the story to claim success without new proof.
+- Link the sanitized completed cloud evidence; keep the first failed run disclosed and arrange judge access without claiming the deleted API is live.
 - Review the current rules, preview every field and press Submit before October 26, 11:45 PM PDT. No source/video URL or owner identity has been invented here.

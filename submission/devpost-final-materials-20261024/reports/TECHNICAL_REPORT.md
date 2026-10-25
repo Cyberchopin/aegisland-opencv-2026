@@ -1,6 +1,6 @@
 # AegisLand: visual evidence changes the next simulated action
 
-Current judge-facing report, October 24, 2026. This supersedes status statements in the preserved earlier reports without changing their evidence.
+Current judge-facing report, updated October 25, 2026 after the bounded cloud test. This supersedes status statements in the preserved earlier reports without changing their evidence.
 
 ## Problem and scope
 
@@ -10,7 +10,7 @@ The demonstration uses fixed synthetic imagery and telemetry. It sends no aircra
 
 ## Implementation and architecture
 
-![Current architecture](../visuals/architecture.svg)
+![Current architecture](../visuals/architecture-cloud-verified.svg)
 
 The external core is pinned to `eda23d3ea646e8943287703c07a91e9a3b2909fb`. It supplies perception, the deterministic agent/planner, policy, approval handling, scripted scenarios, command adapter and reporting. Competition additions provide the isolated launcher, provenance checks, post-run evidence protocol, cloud reliability tests and submission tooling. Core safety policy is unchanged. Coding agents assisted development; the runtime agent does not require an LLM.
 
@@ -34,19 +34,19 @@ At intrusion sequence 37, motion risk is 0 and intent is return-home; at 38, ris
 
 All230 events have matching decoded video and `hardware_command_sent=false`. Artifacts include annotated MP4, trace, summary, dashboard, OpenCV build details, commands and provenance hashes. A fresh 80-frame GPS/low-light run preserves all 80 decision dictionaries. The MP4's 15 FPS is playback speed, not throughput.
 
-The current competition suite has 121 passing offline tests, including SDK contracts, malformed inputs, partial writes, permission/timeouts, concurrent identical/conflicting requests and strict acknowledgements. The full pinned core suite completed with 215 passed and one optional native-CUDA integration skipped, from 216 collected. The final validation matrix records the exact command/output separately from collection. Simulated invalid-signature/expired-time denials test client stop behavior; they do not prove live AWS authentication enforcement. One real unsigned request did return403 in the historical run.
+Historical/saved validation: the competition suite has 121 passing offline tests, including SDK contracts, malformed inputs, partial writes, permission/timeouts, concurrent identical/conflicting requests and strict acknowledgements. The full pinned core suite completed with 215 passed and one optional native-CUDA integration skipped, from 216 collected. The final validation matrix records the exact command/output separately from collection. Simulated invalid-signature/expired-time denials test client stop behavior; they do not prove live AWS authentication enforcement. One real unsigned request did return403 in the historical run.
 
 CPU profiling separates uninstrumented, stage-instrumented and cProfile rounds and checks exact replay equivalence. Smoke measurements are from an uncontrolled host and are not advertised as real-time performance. Historical standalone CUDA summaries lack their full raw measurement artifacts here; no integrated GPU, COOL or speedup claim is made.
 
-## Real AWS result and current correction
+## Historical first AWS failure and completed correction
 
-The reviewed stack's nine resources reached CREATE_COMPLETE. The deployed ZIP hash, Python 3.12 Arm64 configuration and AWS_IAM route were verified. The unsigned request returned the expected 403. The first signed packet returned **503 `storage_unverified`**. Verification stopped after two HTTP requests, with no retry and **zero successful storage acknowledgements**.
+In the first historical attempt, the reviewed stack's nine resources reached CREATE_COMPLETE. The deployed ZIP hash, Python 3.12 Arm64 configuration and AWS_IAM route were verified. The unsigned request returned the expected 403. The first signed packet returned **503 `storage_unverified`**. Verification stopped after two HTTP requests, with no retry and **zero successful storage acknowledgements**.
 
 A 1,618-byte S3 packet matched its original bytes; no corresponding DynamoDB item existed. Evidence was exported before approved deletion of the stack, retained evidence bucket/table and exact staging object. The owner-managed staging bucket remains. Existing unrelated stack/template/function metadata was unchanged. This demonstrates a real deployment and failure boundary, not end-to-end cloud-storage success. Actual billed cost remains unavailable.
 
 Saved logs retained only `ClientError`; the exact historical service, operation and AWS error code cannot be recovered. Offline investigation found an invalid bare `Sequence` expression, corrected with attribute-name aliases. A deterministic regression reproduces DynamoDB-style ValidationException and passes after the correction; this is not proof of the historical code. Additional hardening rejects numeric completion flags and wrong-type ACK sequences, handles deeply nested malformed JSON and adds sanitized diagnostics.
 
-Candidate `final-hardening-20261023-r2` changes only storage/client module bytes; dependency hashes, the nine resources, scoped role/inline policy and encryption are unchanged. It has **not been verified in AWS**. Its conservative full-run allowance is $0.921067; two such allowances total $1.842134 against an aggregate $5 planning target. These are not actual bills or enforced caps. A second Phase A and subsequent new-UUID Phase B require separate authorization.
+Candidate `final-hardening-20261023-r2` changes only storage/client module bytes; dependency hashes, the nine resources, scoped role/inline policy and encryption are unchanged. The owner-authorized corrected run passed **34/34 bounded HTTP requests**: unsigned 1/1, nominal 15/15, duplicate 15/15 and negative 3/3 (400, 400, 409). Cloud readback of fifteen objects and fifteen strongly consistent items passed; reconstructed files byte-matched **9/9**. Exact typed ACKs, packet hashes, object metadata, TTL and bundle identity were verified, with no application retry or redirect. The stack, Lambda, API, execution role, log group, retained evidence bucket/table and exact staging object were removed and absence verified. The existing staging bucket was preserved. The first failed run remains historical evidence, not a result of this corrected run. Its conservative full-run allowance is $0.921067; two such allowances total $1.842134 against an aggregate $5 planning target. These are not actual bills or enforced caps. Actual charges remain unknown. Service-managed KMS and possible PITR/deletion-history records can persist. The removed test API is not a current judge endpoint.
 
 ## Responsible use and reproduction
 
@@ -54,4 +54,4 @@ The synthetic inputs contain no bystander footage. Human-control limits, failure
 
 Follow [REPRODUCE.md](REPRODUCE.md), use the exact core pin and install the locked dependencies. Initial acquisition needs network; prepared execution is offline. The public source manifest identifies a working-tree snapshot rather than pretending the base commit contains uncommitted additions. Distribution rights, team eligibility, source/video access and a live-demo arrangement must be confirmed by the owner.
 
-Primary evidence: `evidence/a1/final/`, `evidence/aws-phase-b/`, `evidence/storage-remediation/`, `evidence/hardening/` and the final validation matrix. The historical failure report remains `docs/AWS_PHASE_B_RESULT.md`. Claims about corrected live storage must remain pending until a separately authorized test verifies all packets and reconstructed files.
+Primary evidence: `evidence/a1/final/`, `evidence/aws-phase-b/`, `evidence/storage-remediation/`, `evidence/hardening/` and the final validation matrix. The historical failure report remains `docs/AWS_PHASE_B_RESULT.md`. The dated public addendum `docs/AWS_PHASE_B_VERIFIED_20261025.md` and sanitized `verification/CLOUD_VERIFICATION_20261025.json` record the later success without exposing private raw receipts. Frozen ZIPs retain their earlier snapshot text.

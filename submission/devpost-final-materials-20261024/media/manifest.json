@@ -3,7 +3,7 @@
   "meaning": "Display copies are transcodes of saved deterministic simulation replay, not new inference evidence. Original evidence/provenance/hash inventories remain unchanged. Linked provenance describes the original mp4v artifact, not the H.264 derivative.",
   "new_inference": false,
   "aircraft_commands_sent": false,
-  "aws_corrected_storage_cloud_verified": false,
+  "aws_corrected_storage_cloud_verified": true,
   "records": [
     {
       "scenario": "nominal",
@@ -308,5 +308,7 @@
         "-"
       ]
     }
-  ]
+  ],
+  "cloud_verification_record": "../verification/CLOUD_VERIFICATION_20261025.json",
+  "display_derivatives_and_original_video_hashes_changed": false
 }

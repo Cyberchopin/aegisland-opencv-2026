@@ -7,8 +7,8 @@ AegisLand turns OpenCV observations into inspectable simulated landing decisions
 ## Verified behavior and limits
 
 - Three retained OpenCV 5 synthetic scenarios contain 230 trace events and matching decoded frames, annotated video, decision reasons and provenance hashes.
-- The reviewed nine-resource AWS stack deployed successfully. The unsigned request returned the expected 403; the first signed packet returned 503 `storage_unverified`. No successful storage acknowledgement was received. Requests stopped without retry, partial evidence was exported, and teardown completed.
-- The storage correction and additional acknowledgement hardening pass offline tests. **The current candidate has not been verified in AWS.** Read the [original cloud result](docs/AWS_PHASE_B_RESULT.md) and [current engineering assessment](docs/candidates/ENGINEERING_ASSESSMENT.md).
+- The corrected nine-resource AWS evidence path passed **34/34 bounded HTTP requests**: unsigned 1/1, nominal 15/15, duplicate 15/15 and negative 3/3. Cloud readback passed and reconstructed files byte-matched **9/9**. The test resources and exact staging object were cleaned; the existing staging bucket was preserved. See the [sanitized live result](docs/AWS_PHASE_B_VERIFIED_20261025.md).
+- The first live attempt remains deployment PASS / storage FAIL 503 / teardown PASS. Its exact historical AWS error code remains unknown. The [original failure report](docs/AWS_PHASE_B_RESULT.md) and historical evaluations are preserved; the later successful test does not rewrite that failure.
 - CPU profiling and exact replay checks are available. Historical standalone CUDA results are separate from the CPU demonstration; no GPU speedup, real-time capability, field success rate or production-flight safety is claimed.
 
 ## Reproduce locally
@@ -37,7 +37,7 @@ Do not use `--upload`, deployment or quota scripts without new authorization. Th
 
 ## Submission and release gates
 
-The [release checklist](submission/candidate-20261023/RELEASE_CHECKLIST.md), [2:55 recording plan](submission/devpost-final-materials-20261024/03_分秒镜头表.md) and [current technical report](submission/entry-20261024/TECHNICAL_REPORT.md) disclose what works and what failed. Working cloud-storage evidence, eligibility/rights checks, judge/source access, real team/video capture and owner-approved submission remain open.
+The [current submission checklist](submission/devpost-final-materials-20261024/05_最终提交检查表.md), [2:55 recording plan](submission/devpost-final-materials-20261024/03_分秒镜头表.md) and [current technical report](submission/entry-20261024/TECHNICAL_REPORT.md) distinguish the completed cloud test from the historical failure. Eligibility/rights checks, judge/source access, real team/video capture and owner submission remain open. The test API has been deleted.
 
 The core retains its policy, GPS-denied behavior and PX4 shadow supervision. Commands do not drive a flight-dynamics model; the demo uses fixed synthetic scenes. Core reuse, team contribution and distribution rights need owner confirmation. This README grants no new license.
 
