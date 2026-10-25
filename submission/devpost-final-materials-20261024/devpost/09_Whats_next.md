@@ -1,3 +1,3 @@
-The immediate next step is a separately owner-authorized, bounded AWS verification of the existing reviewed correction. It requires a new upload/Change Set approval, review, and then separate approval naming a new execution UUID. The test plan uses one uploader, one attempt per request, explicit stop conditions and teardown.
+The bounded AWS verification and cleanup are complete. The immediate submission work is the real team introduction, final under-three-minute video, judge-accessible source/report and an arranged demonstration. The test API was deleted and is not an available public endpoint; no redeployment is needed to present the saved results.
 
 After that, independent evaluation on representative real footage and user workflows would be needed before making operational claims. We are not adding new architecture, models, CUDA kernels or extra cloud services for the deadline. The prototype remains a simulation research system.

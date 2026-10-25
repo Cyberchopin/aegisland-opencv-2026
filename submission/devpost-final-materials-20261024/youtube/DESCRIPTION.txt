@@ -8,9 +8,9 @@ Saved validation:
 - Frozen source archive: 9,181,179 bytes.
 - SHA-256: 8a03304e33ba80f9c19a2ca69022bfd9369674f899497ceda4db6a6a6bb0cfe4
 
-Cloud disclosure: the real AWS deployment passed, but the first signed packet returned 503 storage_unverified. Verification stopped, partial evidence was preserved, and teardown completed. No complete cloud bundle or successful storage acknowledgement was verified. The offline correction has not yet been cloud-verified. The exact historical AWS error code was not recorded.
+Cloud disclosure: the first real AWS storage verification failed with 503; that historical failure and its unknown exact error code remain preserved. The corrected run passed 34/34 bounded HTTP requests: unsigned 1/1, nominal 15/15, duplicate 15/15, negative 3/3. Cloud readback passed; reconstructed files byte-matched 9/9. AWS test resources and the exact staging object were cleaned; the existing staging bucket was preserved. This is recorded verification, not a currently running endpoint.
 
-No field-safety, flight-certification, real-time, GPU-speedup, COOL or end-to-end cloud-storage success claim is made.
+No field-safety, flight-certification, real-time, GPU-speedup or COOL claim is made.
 
 Code/archive: [REPLACE WITH JUDGE-ACCESSIBLE SOURCE LINK]
 Pinned core access: [REPLACE WITH ACCESSIBLE CORE LINK/ARRANGEMENT]
